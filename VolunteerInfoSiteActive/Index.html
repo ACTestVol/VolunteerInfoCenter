@@ -1,0 +1,53 @@
+Index.html – Home Page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body { font-family: Arial; margin:0; padding:0 20px; line-height:1.5; background:#f9f9f9; }
+    nav a { display:inline-block; padding:10px 15px; text-decoration:none; color:#333; font-weight:bold; margin:2px; border-radius:4px; }
+    nav a:hover { background:#ddd; }
+    main { max-width:900px; margin:auto; background:#fff; padding:20px; border-radius:6px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
+    h1, p { text-align:center; }
+    ul { list-style:none; padding:0; max-width:500px; margin:auto; }
+    li { margin:10px 0; text-align:center; }
+    a.button { display:inline-block; padding:10px 20px; background:#2196F3; color:#fff; text-decoration:none; border-radius:4px; }
+    a.button:hover { background:#1e88e5; }
+    @media (max-width:600px) { nav a, a.button { font-size:14px; padding:8px 12px; } }
+  </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<div id="nav.html"></div>
+<script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => { document.getElementById('nav-placeholder').innerHTML = data; });
+</script>
+
+<main>
+  <h1>Volunteer Info Center</h1>
+  <p>Test site, intended only for Volunteers and Staff</p>
+
+  <ul>
+    <li><a class="button" href="recent-adoptions.html">Recent Adoptions</a></li>
+    <li><a class="button" href="recent-transfers.html">Recent Transfers</a></li>
+    <li><a class="button" href="home-trials.html">Current Home Trials</a></li>
+    <li><a class="button" href="pending-possible-adoption.html">Pending Possible Adoption</a></li>
+    
+   
+   <li><a class="button" href="available-dogs.html">Available Dogs Not in DA</a></li>
+    <li><a class="button" href="available-cats.html">Available Cats 1-4, 11 & In House Foster</a></li>
+    <li><a class="button" href="available-from-foster.html">Available from Foster</a></li>
+    <li><a class="button" href="kitten-nursery.html">Kitten Nursery, Cat 9-10</a></li>
+    <li><a class="button" href="rehab-population.html">Rehab Population, Cat 5-7</a></li>
+    <li><a class="button" href="available-animals.html">Available Animals LaSalle and Petsmart</a></li>
+    
+  </ul>
+</main>
+
+</body>
+</html>
